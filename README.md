@@ -1,4 +1,60 @@
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+# Tic Tac TSReact!
+
+This project is the [official React tutorial](https://reactjs.org/tutorial/tutorial.html#completing-the-game) using TypeScript and Sass. There is a working demo [here](http://adripanico.github.io/tic-tac-tsreact).
+
+The steps to create the scaffolding have been as follows:
+
+1. Bootstrap the project with [Create React App](https://github.com/facebook/create-react-app)
+
+```
+npx create-react-app tic-tac-tsreact --typescript
+```
+
+2. Configure TSLint-React
+
+```
+npm install tslint tslint-react --save-dev
+./node_modules/tslint/bin/tslint --init
+```
+
+Replace ```tslint.json``` with the following:
+
+```
+{
+    "defaultSeverity": "error",
+    "extends": [
+        "tslint-react"
+    ],
+    "jsRules": {
+    },
+    "rules": {
+        "member-access": false,
+        "ordered-imports": false,
+        "quotemark": false,
+        "no-console": false,
+        "semicolon": false,
+        "jsx-no-lambda": false
+    },
+    "rulesDirectory": [
+    ],
+    "linterOptions": {
+        "exclude": [
+            "config/**/*.js",
+            "node_modules/**/*.ts"
+       ]
+   }
+}
+```
+
+3. Install Sass dependencies
+
+```
+npm install node-sass --save-dev
+```
+
+Helpful resources:
+* [How to use TypeScript with React and Redux](https://medium.com/@rossbulat/how-to-use-typescript-with-react-and-redux-a118b1e02b76)
+* [Adding a Sass stylesheet](https://create-react-app.dev/docs/adding-a-sass-stylesheet/)
 
 ## Available Scripts
 
