@@ -1,10 +1,10 @@
 export type SquareValue = string | undefined;
 
 export interface SquareProps {
-  highlight: boolean;
-  onClick: () => void;
-  pointer: boolean;
-  value: string | undefined;
+  readonly highlight: boolean;
+  readonly onClick: () => void;
+  readonly pointer: boolean;
+  readonly value: string | undefined;
 }
 
 export interface GameHistoryRecord {
@@ -13,9 +13,9 @@ export interface GameHistoryRecord {
 }
 
 export interface IBoardProps {
-  squares: SquareValue[];
-  onClick: (i: number) => void;
-  winnerLine: number[] | undefined;
+  readonly squares: SquareValue[];
+  readonly onClick: (i: number) => void;
+  readonly winnerLine: number[] | undefined;
 }
 
 export interface GameState {

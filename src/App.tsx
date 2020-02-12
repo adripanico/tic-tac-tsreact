@@ -1,14 +1,39 @@
 import React from 'react';
+import {
+  BrowserRouter as Router,
+  Link,
+  Route,
+  Switch
+} from 'react-router-dom';
 import './App.scss';
 import { Game } from './Game/Game';
 
 const App: React.FC = () => {
   return (
-    <div>
-      <h1>Tic Tac TSReact!</h1>
+    <Router>
+      <div>
+        <nav>
+          <ul>
+            <li>
+              <Link to="/">TTT</Link>
+            </li>
+            <li>
+              <Link to="/about">About</Link>
+            </li>
+          </ul>
+        </nav>
 
-      <Game />
-    </div>
+        <Switch>
+          <Route path="/about">
+            <h2>About</h2>
+          </Route>
+          <Route path="/">
+            <h2>Tic Tac TSReact!</h2>
+            <Game />
+          </Route>
+        </Switch>
+      </div>
+    </Router>
   );
 }
 

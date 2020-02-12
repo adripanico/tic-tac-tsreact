@@ -1,6 +1,8 @@
 # Tic Tac TSReact!
 
-This project is the [official React tutorial](https://reactjs.org/tutorial/tutorial.html#completing-the-game) using TypeScript and Sass. There is a working demo [here](http://adripanico.github.io/tic-tac-tsreact).
+This project is the [official React tutorial](https://reactjs.org/tutorial/tutorial.html#completing-the-game) using TypeScript, React Router and Sass.
+
+There is a working **demo** [here](http://adripanico.github.io/tic-tac-tsreact).
 
 The steps to create the scaffolding have been as follows:
 
@@ -10,7 +12,7 @@ The steps to create the scaffolding have been as follows:
 npx create-react-app tic-tac-tsreact --typescript
 ```
 
-2. Configure TSLint-React
+1. Configure TSLint-React
 
 ```
 npm install tslint tslint-react --save-dev
@@ -46,7 +48,14 @@ Replace ```tslint.json``` with the following:
 }
 ```
 
-3. Install Sass dependencies
+1. Install React Router dependencies
+
+```
+npm install react-router-dom --save
+npm install @types/react-router-dom --save-dev
+```
+
+1. Install Sass dependencies
 
 ```
 npm install node-sass --save-dev
